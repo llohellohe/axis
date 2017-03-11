@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+<html>
+<body>
+I AM SSE CLIENT
+<script>
+var source = new EventSource('/sse-real-server.php');
+
+source.onmessage = function(e){
+  console.log(e.data);
+};
+
+
+source.onopen = function(event) {
+  console.log("OPEN");
+};
+
+</script>
+</body>
+</html>
